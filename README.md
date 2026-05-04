@@ -2,6 +2,19 @@
 
 ## Instruções
 
+### Iterator
+
+Rode:
+
+```bash
+cd iterator
+cargo run
+```
+
+Esse exemplo cria uma struct `Playlist`, que guarda as tracks e expõe um iterador próprio via um trait chamado `PlaylistIterator`. Para fazer da playlist um iterator, chamamos o método `playlist.iter()`, ele cria o iterator, assim, podemos usar o método `.next()` para percorrer os itens um por um.
+
+Com isso, a `Playlist` não precisa expor diretamente como os dados estão guardados por dentro. Quem usa a playlist só precisa pedir um iterator e ir chamando `.next()`, que é justamente a ideia principal do padrão.
+
 ### Bridge
 
 Rode:
