@@ -10,12 +10,13 @@ public class Main{
 
         String option;
         do{
+            System.out.println("====================================");
             System.out.println("Qual tipo de notificação você deseja?\nM = Email\nS = Sms");
             option = scanner.next();
+            option = option.toUpperCase();
+        } while(!option.equals("M") && !option.equals("S"));
 
-        } while(option.toUpperCase() != "M" || option.toUpperCase() != "S");
-
-        if (option.toUpperCase() == "M"){
+        if (option.equals("M")){
             creator = new CreatorEmailNot();
         }
         else{

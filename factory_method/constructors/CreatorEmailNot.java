@@ -7,7 +7,6 @@ public class CreatorEmailNot extends Creator {
 
     @Override
     public Notification createNotification() {
-        System.out.println("oi");
         return new EmailNotification();
     }
 }
